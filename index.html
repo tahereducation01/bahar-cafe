@@ -28,13 +28,7 @@
             line-height: 1.6;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .navbar-brand {
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
             font-family: 'Josefin Sans', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -122,6 +116,19 @@
             margin: 20px 0;
         }
 
+        /* --- Features/Amenities Section (NEW) --- */
+        .features-section {
+            background-color: var(--off-white);
+            padding: 60px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .feature-box i {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
         /* --- Menu Section --- */
         .menu-section {
             padding: 80px 0;
@@ -148,6 +155,32 @@
             width: 100%;
         }
 
+        /* --- Events Section (NEW) --- */
+        .events-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        .event-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            height: 100%;
+            transition: 0.3s;
+        }
+        .event-card:hover {
+            background-color: var(--off-white);
+            border-color: var(--primary-beige);
+        }
+        .date-badge {
+            background-color: var(--text-brown);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
         /* --- Gallery Section --- */
         .gallery-img {
             width: 100%;
@@ -160,6 +193,21 @@
 
         .gallery-img:hover {
             opacity: 0.8;
+        }
+
+        /* --- Testimonials Section (NEW) --- */
+        .testimonials-section {
+            background-color: #efebe9; /* Light coffee tint */
+            padding: 80px 0;
+            text-align: center;
+        }
+        .testimonial-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* --- Contact/Location --- */
@@ -225,6 +273,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Visit Us</a></li>
                     <li class="nav-item ms-lg-3">
@@ -267,6 +316,33 @@
                         friends, Café Bahār is your home away from home. We are proud to be an LGBTQ+ friendly space
                         where everyone is welcome.</p>
                     <p class="fw-bold mt-4">- By Khuzaan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section text-center">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="fas fa-paw"></i>
+                    <h5 class="fw-bold">Pet Friendly</h5>
+                    <p class="small text-muted">Bring your furry friends along!</p>
+                </div>
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="fas fa-wifi"></i>
+                    <h5 class="fw-bold">Free Wi-Fi</h5>
+                    <p class="small text-muted">Perfect for remote work sessions.</p>
+                </div>
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="fas fa-book-open"></i>
+                    <h5 class="fw-bold">Book Corner</h5>
+                    <p class="small text-muted">Read, relax, and unwind.</p>
+                </div>
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="fas fa-heart"></i>
+                    <h5 class="fw-bold">Inclusive Space</h5>
+                    <p class="small text-muted">Safe space for the LGBTQ+ family.</p>
                 </div>
             </div>
         </div>
@@ -321,6 +397,47 @@
         </div>
     </section>
 
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="row mb-5 align-items-end">
+                <div class="col-md-8">
+                    <h5 class="text-uppercase text-muted ls-2">Community Hub</h5>
+                    <h2 class="fw-bold">What's Happening</h2>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <a href="https://www.instagram.com/cafebaharpune/" target="_blank" class="btn btn-outline-dark rounded-pill">Check Instagram for Updates</a>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="event-card d-flex align-items-center">
+                        <div class="me-4 text-center">
+                            <i class="fas fa-microphone-alt fa-3x text-warning"></i>
+                        </div>
+                        <div>
+                            <span class="date-badge">Select Weekends</span>
+                            <h4>Open Mic Nights</h4>
+                            <p class="text-muted mb-0">Music, poetry, and storytelling. Come share your voice with the community.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="event-card d-flex align-items-center">
+                        <div class="me-4 text-center">
+                            <i class="fas fa-palette fa-3x text-warning"></i>
+                        </div>
+                        <div>
+                            <span class="date-badge">Monthly</span>
+                            <h4>Creative Workshops</h4>
+                            <p class="text-muted mb-0">From crochet to painting, join us for relaxed learning sessions over coffee.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="gallery" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -336,6 +453,38 @@
                 <div class="col-md-4 col-6">
                     <img src="shop3.png" class="gallery-img" alt="Vibe 3">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="fw-bold mb-5">Community Love</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-box">
+                            <i class="fas fa-quote-left fa-2x text-warning mb-3"></i>
+                            <p class="lead fst-italic">"The most comforting place in Wanowrie! The coffee is amazing, but the vibe is what keeps me coming back. Truly a safe space for everyone."</p>
+                            <h6 class="fw-bold mt-3">- Riya S.</h6>
+                            <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-box">
+                            <i class="fas fa-quote-left fa-2x text-warning mb-3"></i>
+                            <p class="lead fst-italic">"Great food, lovely aesthetics, and the staff is super friendly. The inclusive environment makes a huge difference."</p>
+                            <h6 class="fw-bold mt-3">- Rohan K.</h6>
+                            <div class="text-warning small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </section>
