@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Bahār by Khuzaan | Inclusive Community Hub Pune</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-beige: #CBBcb1;
+            --primary-dark: #b0a195;
+            --text-brown: #3E2723;
+            --off-white: #F9F9F9;
+            --accent-gold: #D4AF37;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-brown);
+            background-color: var(--off-white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- Custom SVG Logo Styling --- */
+        .navbar-brand svg {
+            height: 60px;
+            width: 60px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+        }
+
+        .nav-link {
+            color: var(--text-brown) !important;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-dark) !important;
+        }
+
+        .btn-custom {
+            background-color: var(--text-brown);
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px 25px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            border: 2px solid var(--text-brown);
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: transparent;
+            color: var(--text-brown);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(62, 39, 35, 0.6), rgba(62, 39, 35, 0.6)), url('mainshop.png');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* --- About Section --- */
+        .about-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .rainbow-line {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            margin: 20px 0;
+        }
+
+        /* --- Menu Section --- */
+        .menu-section {
+            padding: 80px 0;
+            background-color: var(--primary-beige);
+        }
+
+        .menu-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 24px;
+            transition: opacity 0.3s;
+        }
+        .gallery-img:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Contact/Location --- */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #3E2723;
+            color: var(--primary-beige);
+        }
+
+        .contact-section h2 {
+            color: #fff;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            filter: grayscale(20%) contrast(1.2) opacity(0.9);
+        }
+
+        footer {
+            background-color: #2b1b18;
+            color: #8d8d8d;
+            padding: 20px 0;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .navbar-brand svg { height: 45px; width: 45px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="100" fill="#CBBcb1"/>
+                    <text x="50%" y="35%" text-anchor="middle" fill="white" font-family="'Josefin Sans', sans-serif" font-size="24" letter-spacing="8">CAFÉ</text>
+                    <text x="50%" y="62%" text-anchor="middle" fill="white" font-family="'Josefin Sans', sans-serif" font-size="55" letter-spacing="2" font-weight="bold">BAHĀR</text>
+                    <text x="50%" y="82%" text-anchor="middle" fill="white" font-family="'Lato', sans-serif" font-size="14" letter-spacing="2" style="text-transform: uppercase;">By Khuzaan</text>
+                </svg>
+                <span class="d-none d-md-block">Café Bahār</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Visit Us</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="https://www.zomato.com/pune/cafe-bahar-by-khuzaan-wanowrie" target="_blank" class="btn btn-custom">Order on Zomato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1>Fresh Bakes, Brews &<br>Good Energy</h1>
+                    <p class="lead">An inclusive community hub serving the heart of Wanowrie.</p>
+                    <div class="mt-4">
+                        <a href="#menu" class="btn btn-light btn-lg me-2 rounded-pill px-4">View Menu</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-4">Find Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="shop.png" alt="Cafe Interior" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h5 class="text-uppercase text-muted ls-2">Welcome to Café Bahār</h5>
+                    <h2 class="display-6 fw-bold mb-3">More than just coffee.</h2>
+                    <div class="rainbow-line"></div>
+                    <p class="lead">We are an inclusive community hub serving fresh bakes, brews, and meals, with a side of good energy. ☕️</p>
+                    <p>Whether you're here for our signature burgers, a quiet corner to work, or to catch up with friends, Café Bahār is your home away from home. We are proud to be an LGBTQ+ friendly space where everyone is welcome.</p>
+                    <p class="fw-bold mt-4">- By Khuzaan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Favorites</h2>
+                <p class="text-muted">Freshly prepared, served with love. (Approx ₹400–600 per person)</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="menu-img" alt="Coffee">
+                        <div class="p-4">
+                            <h4>Specialty Brews</h4>
+                            <p class="text-muted small">Artisanal coffees, lattes, and fresh juices to kickstart your day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-card">
+                        <img src="burger.jpg" class="menu-img" alt="Bakes">
+                        <div class="p-4">
+                            <h4>Fresh Bakes</h4>
+                            <p class="text-muted small">Burgers, pancakes, and bakery specials made fresh daily.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-card">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="menu-img" alt="Meals">
+                        <div class="p-4">
+                            <h4>Wholesome Meals</h4>
+                            <p class="text-muted small">Hearty bowls and comfort food for the soul.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://drive.google.com/file/d/1kMUR0RlwVx5cs6NaWeVoxXAZKFgTJOMM/view" target="_blank" class="btn btn-dark btn-lg rounded-pill px-5 shadow">
+                    <i class="fas fa-file-pdf me-2"></i> View Full Menu Card
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">The Vibe</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-6">
+                    <img src="shop.png" class="gallery-img" alt="Vibe 1">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="shop2.png" class="gallery-img" alt="Vibe 2">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img src="shop3.png" class="gallery-img" alt="Vibe 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 class="mb-4">Visit Us</h2>
+                    <p class="mb-4">Come for the food, stay for the community. We are located in Oxford Village, opposite Salunke Vihar Society.</p>
+                    
+                    <div class="d-flex mb-3">
+                        <i class="fas fa-map-marker-alt text-warning mt-1 me-3"></i>
+                        <p>Shop no. 2, Le Royale, 3, Salunke Vihar Rd,<br>Wanowrie, Pune, Maharashtra 411022</p>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <i class="fas fa-clock text-warning mt-1 me-3"></i>
+                        <div>
+                            <p class="mb-0"><strong>Mon:</strong> Closed</p>
+                            <p class="mb-0"><strong>Tue - Fri:</strong> 10:00 AM - 10:00 PM</p>
+                            <p class="mb-0"><strong>Sat & Sun:</strong> 08:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <i class="fas fa-phone text-warning mt-1 me-3"></i>
+                        <p><a href="tel:02029523869" class="text-light text-decoration-none">020 2952 3869</a></p>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=Cafe+Bahar+By+Khuzaan+Pune" target="_blank" class="btn btn-outline-light rounded-pill px-4">
+                        <i class="fas fa-location-arrow me-2"></i> Get Directions
+                    </a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="map-container shadow">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.847528392!2d73.899!3d18.489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDI5JzIyLjQiTiA3M8KwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                        allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2">© 2026 Café Bahār by Khuzaan. All Rights Reserved.</p>
+            <p class="small">Inclusive Community Hub • Pune</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
